@@ -108,7 +108,7 @@ function loadXMLDoc1() {
     }
   };
 
-  xmlhttp.open("GET", "database/Monday.xml", true);
+  xmlhttp.open("GET", "database/Tuesday.xml", true);
   xmlhttp.send();
 }
 function myFunction1(xml) {
