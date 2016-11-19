@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title> EEM 343 Robotic </title>
+<title> JomHack 2016 </title>
     
 <head>
   <link rel="stylesheet" href="style.css">
@@ -19,7 +19,7 @@ th,td {
 <body>
 
 <div id="header">
-<h1>EEM 343 Robotic Auto Team</h1>
+<h1>Group 7</h1>
 </div>
     
 <div id="section">    
@@ -41,7 +41,7 @@ if (file_exists($filename))
 </div>
 
 <div id="section">
-<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+<button type="button" onclick="loadXMLDoc()">Get Monday</button>
 <br><br>
 <table id="demo"></table>
 <button type="button" onclick="loadXMLDoc1()">Get Tuesday</button>
@@ -50,27 +50,24 @@ if (file_exists($filename))
 <button type="button" onclick="loadXMLDoc2()">Get Wednesday</button>
 <br><br>
 <table id="demo2"></table>
-<button type="button" onclick="loadXMLDoc3()">Get Thurday</button>
+<button type="button" onclick="loadXMLDoc3()">Get Thursday</button>
 <br><br>
 <table id="demo3"></table>
 <button type="button" onclick="loadXMLDoc4()">Get Friday</button>
 <br><br>
 <table id="demo4"></table>
-<button type="button" onclick="loadXMLDoc5()">Get my CD collection</button>
+<button type="button" onclick="loadXMLDoc5()">Get Saturday</button>
 <br><br>
 <table id="demo5"></table>
-<button type="button" onclick="loadXMLDoc6()">Get my CD collection</button>
+<button type="button" onclick="loadXMLDoc6()">Get Sunday</button>
 <br><br>
 <table id="demo6"></table>
  
 </div>
 
-<div id="section">
-<h1>EEM 343 Robotic Auto Team</h1>
-</div>
     
 <div id="footer">
-Copyright @ EEM 343 Robotic 2017
+Copyright @ JomHack 2016 Group 7
 </div>
 <script>
 function loadXMLDoc() {
