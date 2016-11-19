@@ -41,8 +41,8 @@ if (file_exists($filename))
 </div>
 
 <div id="section">
-<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
-<br><br>
+//<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+//<br><br>
 <table id="demo"></table>
 </div>
 
