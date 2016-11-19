@@ -30,14 +30,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     fwrite($myfile,"number of avalible parking slot: ".$_POST["slider"]);
     fclose($myfile);
 }
-    /*
+    
 if (file_exists($filename))
 {
   $readfile = fopen($filename, "r")or die("Unable to open file!");
   while(!feof($readfile)) 
     echo fgets($readfile) . "<br>";
   fclose($readfile);
-}*/
+}
 ?>
 </div>
 
