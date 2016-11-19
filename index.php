@@ -6,6 +6,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
     
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+    
 <body>
 
 <div id="header">
