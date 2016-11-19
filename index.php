@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+<title> EEM 343 Robotic </title>
+    
+<head>
+  <link rel="stylesheet" href="robo.css">
+</head>
+    
+<body>
+
+<div id="header">
+<h1>EEM 343 Robotic Auto Team</h1>
+</div>
+    
 <?php
 
 $filename = "text.txt";
@@ -23,3 +37,9 @@ if (file_exists($filename))
     fclose($myfile);
 }*/
 ?>
+<div id="footer">
+Copyright @ EEM 343 Robotic 2016
+</div>
+
+</body>
+</html>
