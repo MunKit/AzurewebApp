@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title> EEM 343 Robotic </title>
+<title> JomHack 2016 </title>
     
 <head>
   <link rel="stylesheet" href="style.css">
@@ -19,7 +19,7 @@ th,td {
 <body>
 
 <div id="header">
-<h1>EEM 343 Robotic Auto Team</h1>
+<h1>Group 7</h1>
 </div>
     
 <div id="section">    
@@ -41,32 +41,47 @@ if (file_exists($filename))
 </div>
 
 <div id="section">
-<button type="button" onclick="loadXMLDoc(Monday.xml,demo)">Get my CD collection</button>
+<button type="button" onclick="loadXMLDoc()">Get Monday</button>
 <br><br>
 <table id="demo"></table>
+<button type="button" onclick="loadXMLDoc1()">Get Tuesday</button>
+<br><br>
+<table id="demo1"></table>
+<button type="button" onclick="loadXMLDoc2()">Get Wednesday</button>
+<br><br>
+<table id="demo2"></table>
+<button type="button" onclick="loadXMLDoc3()">Get Thursday</button>
+<br><br>
+<table id="demo3"></table>
+<button type="button" onclick="loadXMLDoc4()">Get Friday</button>
+<br><br>
+<table id="demo4"></table>
+<button type="button" onclick="loadXMLDoc5()">Get Saturday</button>
+<br><br>
+<table id="demo5"></table>
+<button type="button" onclick="loadXMLDoc6()">Get Sunday</button>
+<br><br>
+<table id="demo6"></table>
+ 
 </div>
 
-<div id="section">
-<h1>EEM 343 Robotic Auto Team</h1>
-</div>
     
 <div id="footer">
-Copyright @ EEM 343 Robotic 2017
+Copyright @ JomHack 2016 Group 7
 </div>
 <script>
-function loadXMLDoc(file,icd) {
+function loadXMLDoc() {
   var xmlhttp = new XMLHttpRequest();
-  var path = "database/";
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      myFunction(this,icd);
+      myFunction(this);
     }
   };
-  path += file;
-  xmlhttp.open("GET", path, true);
+
+  xmlhttp.open("GET", "database/Monday.xml", true);
   xmlhttp.send();
 }
-function myFunction(xml,identi) {
+function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
   var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
@@ -79,7 +94,166 @@ function myFunction(xml,identi) {
     "</td></tr>";
   }
   table += "</table>";
-  document.getElementById(identi).innerHTML = table;
+  document.getElementById("demo").innerHTML = table;
+}
+
+function loadXMLDoc1() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction1(this);
+    }
+  };
+
+  xmlhttp.open("GET", "database/Tuesday.xml", true);
+  xmlhttp.send();
+}
+function myFunction1(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
+  var x = xmlDoc.getElementsByTagName("TIMEFRAME");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NUMBEROFCAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  table += "</table>";
+  document.getElementById("demo1").innerHTML = table;
+}
+
+function loadXMLDoc2() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this);
+    }
+  };
+
+  xmlhttp.open("GET", "database/Wednesday.xml", true);
+  xmlhttp.send();
+}
+function myFunction2(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
+  var x = xmlDoc.getElementsByTagName("TIMEFRAME");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NUMBEROFCAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  table += "</table>";
+  document.getElementById("demo2").innerHTML = table;
+}
+function loadXMLDoc3() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction3(this);
+    }
+  };
+
+  xmlhttp.open("GET", "database/Thursday.xml", true);
+  xmlhttp.send();
+}
+function myFunction3(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
+  var x = xmlDoc.getElementsByTagName("TIMEFRAME");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NUMBEROFCAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  table += "</table>";
+  document.getElementById("demo3").innerHTML = table;
+}
+function loadXMLDoc4() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction4(this);
+    }
+  };
+
+  xmlhttp.open("GET", "database/Friday.xml", true);
+  xmlhttp.send();
+}
+function myFunction4(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
+  var x = xmlDoc.getElementsByTagName("TIMEFRAME");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NUMBEROFCAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  table += "</table>";
+  document.getElementById("demo4").innerHTML = table;
+}
+function loadXMLDoc5() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction5(this);
+    }
+  };
+
+  xmlhttp.open("GET", "database/Saturday.xml", true);
+  xmlhttp.send();
+}
+function myFunction5(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
+  var x = xmlDoc.getElementsByTagName("TIMEFRAME");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NUMBEROFCAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  table += "</table>";
+  document.getElementById("demo5").innerHTML = table;
+}
+    
+function loadXMLDoc6() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction6(this);
+    }
+  };
+
+  xmlhttp.open("GET", "database/Sunday.xml", true);
+  xmlhttp.send();
+}
+function myFunction6(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
+  var x = xmlDoc.getElementsByTagName("TIMEFRAME");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NUMBEROFCAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  table += "</table>";
+  document.getElementById("demo6").innerHTML = table;
 }
 </script>
 </body>
