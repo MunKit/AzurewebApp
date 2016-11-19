@@ -4,16 +4,17 @@
     
 <head>
   <link rel="stylesheet" href="style.css">
+</head>
+    
 <style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse:collapse;
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
 }
-th, td {
+th,td {
   padding: 5px;
 }
 </style>
-</head>
     
 <body>
 
@@ -49,7 +50,9 @@ if (file_exists($filename))
 <table id="demo"></table>
 </div>
 
-
+<div id="section">
+<h1>EEM 343 Robotic Auto Team</h1>
+</div>
     
 <div id="footer">
 Copyright @ EEM 343 Robotic 2017
