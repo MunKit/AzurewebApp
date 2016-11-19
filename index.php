@@ -35,7 +35,9 @@ if (file_exists($filename))
 </div>
 
 <div id="section">
-<h1>EEM 343 Robotic Auto Team</h1>
+<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+<br><br>
+<table id="demo"></table>
 </div>
 
 <div id="section">
@@ -45,6 +47,31 @@ if (file_exists($filename))
 <div id="footer">
 Copyright @ EEM 343 Robotic 2017
 </div>
-
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "database/Monday.xml", true);
+  xmlhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Time</th><th>Number of car</th></tr>";
+  var x = xmlDoc.getElementsByTagName("TIMEFRAME");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("TIME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NUMBEROFCAR")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
 </body>
 </html>
