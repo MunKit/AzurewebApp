@@ -8,7 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if (file_exists($filename))
 {
   $readfile = fopen($filename, "r")or die("Unable to open file!");
-  echo fread($readfile,filesize("webdictionary.txt"));
+  while(!feof($readfile)) {
+    echo fgets($readfile) . "<br>";
   fclose($readfile);
 }
 ?>
