@@ -42,6 +42,15 @@ if (file_exists($filename))
 <h1>EEM 343 Robotic Auto Team</h1>
 </div>
     
+    <div id="section">
+<h1>EEM 343 Robotic Auto Team</h1>
+</div>
+    <div id="section">
+<h1>EEM 343 Robotic Auto Team</h1>
+</div>
+    <div id="section">
+<h1>EEM 343 Robotic Auto Team</h1>
+</div>
 <div id="footer">
 Copyright @ EEM 343 Robotic 2016
 </div>
