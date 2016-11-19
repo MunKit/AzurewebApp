@@ -47,9 +47,7 @@ if (file_exists($filename))
 </div>
 
 <div id="section">
-<button type="button" onclick="loadXMLDoc(Tuesday.xml,tuesday)">Get tuesday</button>
-<br><br>
-<table id="tuesday"></table>
+<h1>EEM 343 Robotic Auto Team</h1>
 </div>
     
 <div id="footer">
