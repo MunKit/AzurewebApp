@@ -24,18 +24,9 @@ th,td {
     
 <div id="section">    
 <?php
-$filename = "text.txt";
+$filename = "realtime.xml";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $myfile = fopen($filename, "a") or die("Unable to open file!");
-    fwrite($myfile,"1 1 1 1 2");
-    fclose($myfile);
-}
-if (file_exists($filename))
-{
-  $readfile = fopen($filename, "r")or die("Unable to open file!");
-  while(!feof($readfile)) 
-    echo fgets($readfile) . "<br>";
-  fclose($readfile);
+    echo 'number of parking slot avalible:'.$_POST["slider"].;
 }
 ?>
 </div>
