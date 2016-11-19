@@ -63,7 +63,7 @@ function loadXMLDoc(file,icd) {
     }
   };
   path += file;
-  xmlhttp.open("GET", file, true);
+  xmlhttp.open("GET", path, true);
   xmlhttp.send();
 }
 function myFunction(xml,identi) {
