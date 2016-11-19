@@ -41,7 +41,7 @@ if (file_exists($filename))
 </div>
 
 <div id="section">
-<button type="button" onclick="loadXMLDoc(Monday.xml, demo)">Get my CD collection</button>
+<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
 <br><br>
 <table id="demo"></table>
 </div>
@@ -54,19 +54,17 @@ if (file_exists($filename))
 Copyright @ EEM 343 Robotic 2017
 </div>
 <script>
-function loadXMLDoc(file,icd) {
+function loadXMLDoc() {
   var xmlhttp = new XMLHttpRequest();
-  var path = "database/";
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      myFunction(this,icd);
+      myFunction(this);
     }
   };
-  path += file;
-  xmlhttp.open("GET", path, true);
+  xmlhttp.open("GET", "database/Monday.xml", true);
   xmlhttp.send();
 }
-function myFunction(xml,identi) {
+function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
   var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
@@ -79,7 +77,7 @@ function myFunction(xml,identi) {
     "</td></tr>";
   }
   table += "</table>";
-  document.getElementById(identi).innerHTML = table;
+  document.getElementById("demo").innerHTML = table;
 }
 </script>
 </body>
