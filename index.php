@@ -3,7 +3,7 @@
 <title> EEM 343 Robotic </title>
     
 <head>
-  <link rel="stylesheet" href="robo.css">
+  <link rel="stylesheet" href="style.css">
 </head>
     
 <body>
@@ -12,6 +12,7 @@
 <h1>EEM 343 Robotic Auto Team</h1>
 </div>
     
+<div id="section">    
 <?php
 
 $filename = "text.txt";
@@ -28,15 +29,10 @@ if (file_exists($filename))
   while(!feof($readfile)) 
     echo fgets($readfile) . "<br>";
   fclose($readfile);
-}/*
-if (file_exists($filename))
-{
-    $myfile = fopen("text.txt", "r") or die("Unable to open file!");
-    while(!feof($readfile)) 
-    echo fgets($myfile);
-    fclose($myfile);
-}*/
+}
+
 ?>
+</div>
 <div id="footer">
 Copyright @ EEM 343 Robotic 2016
 </div>
