@@ -4,17 +4,16 @@
     
 <head>
   <link rel="stylesheet" href="style.css">
-</head>
-    
 <style>
-table,th,td {
-  border : 1px solid black;
-  border-collapse: collapse;
+table, th, td {
+  border: 1px solid black;
+  border-collapse:collapse;
 }
-th,td {
+th, td {
   padding: 5px;
 }
 </style>
+</head>
     
 <body>
 
