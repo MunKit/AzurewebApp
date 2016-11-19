@@ -42,11 +42,7 @@ if (file_exists($filename))
 <table id="demo"></table>
 </div>
 
-<div id="section">
-<button type="button" onclick="loadXMLDoc(Tuesday.xml,tuesday)">Get my CD collection</button>
-<br><br>
-<table id="tuesday"></table>
-</div>
+
     
 <div id="footer">
 Copyright @ EEM 343 Robotic 2017
