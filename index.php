@@ -6,15 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
     
-<style>
-table,th,td {
-  border : 1px solid black;
-  border-collapse: collapse;
-}
-th,td {
-  padding: 5px;
-}
-</style>
+
     
 <body>
 
@@ -51,7 +43,9 @@ if (file_exists($filename))
 </div>
 
 <div id="section">
-<h1>EEM 343 Robotic Auto Team</h1>
+<button type="button" onclick="loadXMLDoc(Tuesday.xml,tuesday)">Get my CD collection</button>
+<br><br>
+<table id="tuesday"></table>
 </div>
     
 <div id="footer">
