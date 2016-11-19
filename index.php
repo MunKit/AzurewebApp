@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $myfile = fopen($filename, "w") or die("Unable to open file!");
     fwrite($myfile,"number of avalible parking slot: ".$_POST["slider"]);
     fclose($myfile);
+    var_dump($_REQUEST);
 }
     
 if (file_exists($filename))
