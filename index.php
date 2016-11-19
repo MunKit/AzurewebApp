@@ -44,9 +44,9 @@ if (file_exists($filename))
 <button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
 <br><br>
 <table id="demo"></table>
-<button type="button" onclick="loadXMLDoc1()">Get Tuesday</button>
+<button type="button" onclick="loadXMLDoc2()">Get Tuesday</button>
 <br><br>
-<table id="demo1"></table>
+<table id="demo2"></table>
 <button type="button" onclick="loadXMLDoc2()">Get Wednesday</button>
 <br><br>
 <table id="demo2"></table>
@@ -108,7 +108,7 @@ function loadXMLDoc1() {
     }
   };
 
-  xmlhttp.open("GET", "database/Tuesday.xml", true);
+  xmlhttp.open("GET", "database/Tuesdays.xml", true);
   xmlhttp.send();
 }
 function myFunction1(xml) {
