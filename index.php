@@ -71,7 +71,7 @@ function loadXMLDoc() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>Time</th><th>Number of car</th></tr>";
+  var table="<table><tr><th>Time</th><th>Number of car</th></tr>";
   var x = xmlDoc.getElementsByTagName("TIMEFRAME");
   for (i = 0; i <x.length; i++) {
     table += "<tr><td>" +
@@ -80,6 +80,7 @@ function myFunction(xml) {
     x[i].getElementsByTagName("NUMBEROFCAR")[0].childNodes[0].nodeValue +
     "</td></tr>";
   }
+  table += "</table>";
   document.getElementById("demo").innerHTML = table;
 }
 </script>
